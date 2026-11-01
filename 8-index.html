@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<style>
+body { font-family: Arial; text-align: center; }
+nav { background: navy; padding: 15px; }
+nav a { color: white; margin: 15px; }
+@media(max-width:600px) {
+    nav a { display: block; padding: 5px; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>My Website</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h2>Search</h2>
+<input id="s" placeholder="Search About or Contact">
+<button onclick="search()">Go</button>
+
+<script>
+function search() {
+let x = document.getElementById("s").value.toLowerCase();
+if(x == "about") location.href="about.html";
+else if(x == "contact") location.href="contact.html";
+else alert("Page not found");
+}
+</script>
+
+</body>
+</html>
